@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ashu-finalapp
+  name: ashu-finalapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashu-finalapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ashu-finalapp
+    spec:
+      containers:
+      - image: dockerashu/ashumobiwebapp:6
+        name: ashumobiwebapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
